@@ -38,7 +38,7 @@ Then reload the Web app.
 You can also install straight from GitHub. The plugin is plain JavaScript and CSS, so no build step is needed:
 
 ```sh
-dsh plugin --profile web add github:soumendudas22/dsh-turn-timeline#v1.0.0
+dsh plugin --profile web add github:soumendudas22/dsh-turn-timeline#v1.0.1
 ```
 
 ## Verify

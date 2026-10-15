@@ -1,6 +1,6 @@
 {
   "name": "@soumendudas22/dsh-turn-timeline",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "DeepSeek Harness (DSH) plugin that shows each chat turn's reasoning and tool calls as a timeline, with a rail and live status dots.",
   "keywords": ["dsh", "deepseek-harness", "dsh-plugin", "cordis", "timeline", "chat"],
   "homepage": "https://github.com/soumendudas22/dsh-turn-timeline#readme",
