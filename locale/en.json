@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Turn Timeline",
+    "description": "Shows each turn's reasoning and tool calls on a timeline rail with live status dots."
+  }
+}
