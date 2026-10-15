@@ -25,21 +25,17 @@ A DeepSeek Harness (DSH) plugin that lays out each chat turn's reasoning and too
 ## Install
 
 ```sh
-dsh plugin add @soumendudas22/dsh-turn-timeline
+dsh plugin --profile web add @soumendudas22/dsh-turn-timeline
 ```
 
-To install into a specific profile:
-
-```sh
-dsh plugin --profile <name> add @soumendudas22/dsh-turn-timeline
-```
+`web` is the profile the DeepSeek Harness Web app uses; replace it if you run the app under another profile.
 
 Then reload the Web app.
 
 You can also install straight from GitHub. The plugin is plain JavaScript and CSS, so no build step is needed:
 
 ```sh
-dsh plugin add github:soumendudas22/dsh-turn-timeline#v1.0.0
+dsh plugin --profile web add github:soumendudas22/dsh-turn-timeline#v1.0.0
 ```
 
 ## Verify
@@ -47,7 +43,7 @@ dsh plugin add github:soumendudas22/dsh-turn-timeline#v1.0.0
 Check that the plugin is part of your profile's configuration:
 
 ```sh
-dsh --profile <name> --dump-config
+dsh --profile web --dump-config
 ```
 
 The output should include a `# == @soumendudas22/dsh-turn-timeline` layer.
@@ -58,7 +54,7 @@ The output should include a `# == @soumendudas22/dsh-turn-timeline` layer.
 - To uninstall it:
 
   ```sh
-  dsh plugin remove @soumendudas22/dsh-turn-timeline
+  dsh plugin --profile web remove @soumendudas22/dsh-turn-timeline
   ```
 
 ## Development
@@ -67,7 +63,7 @@ Clone this repository and link your checkout into a profile:
 
 ```sh
 git clone https://github.com/soumendudas22/dsh-turn-timeline.git
-dsh plugin --profile <name> add ./dsh-turn-timeline
+dsh plugin --profile web add ./dsh-turn-timeline
 ```
 
 | File | Purpose |
