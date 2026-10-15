@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+## [1.0.1] - 2026-10-16
+
+No change to the plugin itself; this release adds project documentation and automation.
+
+### Added
+
+- Contributing guide with the branch model, commit conventions and release process.
+- Security policy with private reporting channels.
+- Code of conduct (Contributor Covenant 2.1).
+- Support guide.
+- Issue forms for bug reports and feature requests, and a pull request template.
+- CI checks for package consistency on pushes and pull requests, and a release workflow that publishes to npm from version tags.
+- CI and release workflows use actions/checkout v7 and actions/setup-node v7.
+- CI and npm badges, and Contributing and Security sections in the README.
+
 ## [1.0.0] - 2026-10-15
 
 ### Added
@@ -16,4 +33,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Reduced-motion support: the dot colour transition is disabled when the system asks for reduced motion.
 - English and Chinese plugin title and description.
 
+[Unreleased]: https://github.com/soumendudas22/dsh-turn-timeline/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/soumendudas22/dsh-turn-timeline/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/soumendudas22/dsh-turn-timeline/releases/tag/v1.0.0

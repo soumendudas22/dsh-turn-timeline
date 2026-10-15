@@ -1,5 +1,8 @@
 # Turn Timeline for DeepSeek Harness
 
+[![CI](https://github.com/soumendudas22/dsh-turn-timeline/actions/workflows/ci.yml/badge.svg?branch=development)](https://github.com/soumendudas22/dsh-turn-timeline/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/@soumendudas22/dsh-turn-timeline)](https://www.npmjs.com/package/@soumendudas22/dsh-turn-timeline)
+
 A DeepSeek Harness (DSH) plugin that lays out each chat turn's reasoning and tool calls on a timeline, with a rail and live status dots.
 
 ## What it does
@@ -35,7 +38,7 @@ Then reload the Web app.
 You can also install straight from GitHub. The plugin is plain JavaScript and CSS, so no build step is needed:
 
 ```sh
-dsh plugin --profile web add github:soumendudas22/dsh-turn-timeline#v1.0.0
+dsh plugin --profile web add github:soumendudas22/dsh-turn-timeline#v1.0.1
 ```
 
 ## Verify
@@ -73,6 +76,14 @@ dsh plugin --profile web add ./dsh-turn-timeline
 | `cordis.patch.yml` | Tells DSH to load the plugin. |
 | `locale/` | Plugin title and description in English and Chinese. |
 | `icon.svg` | Plugin icon shown in the Web app. |
+
+## Contributing
+
+Bug reports, ideas, fixes and translations are all welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for the setup, branch model and pull request process, and please follow the [Code of Conduct](CODE_OF_CONDUCT.md).
+
+## Security
+
+To report a vulnerability privately, follow the [security policy](SECURITY.md).
 
 ## License
 
