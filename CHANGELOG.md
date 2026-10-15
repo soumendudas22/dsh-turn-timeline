@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.2] - 2026-10-16
+
+No change to the plugin itself. This is the first version published to npm; 1.0.1 was tagged on GitHub but never reached npm.
+
+### Changed
+
+- Releases are staged on npm and only go live after a maintainer approves them with two-factor authentication.
+
 ## [1.0.1] - 2026-10-16
 
 No change to the plugin itself; this release adds project documentation and automation.
@@ -33,6 +41,7 @@ No change to the plugin itself; this release adds project documentation and auto
 - Reduced-motion support: the dot colour transition is disabled when the system asks for reduced motion.
 - English and Chinese plugin title and description.
 
-[Unreleased]: https://github.com/soumendudas22/dsh-turn-timeline/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/soumendudas22/dsh-turn-timeline/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/soumendudas22/dsh-turn-timeline/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/soumendudas22/dsh-turn-timeline/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/soumendudas22/dsh-turn-timeline/releases/tag/v1.0.0
