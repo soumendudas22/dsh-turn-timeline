@@ -18,7 +18,8 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v7
         with:
-          node-version: 22
+          # Node 24 ships npm 11.15+, which `npm stage publish` requires.
+          node-version: 24
           registry-url: https://registry.npmjs.org
       - name: Verify tag matches package.json version
         run: |
@@ -35,6 +36,20 @@ jobs:
             exit 1
           fi
       - run: npm test
-      - run: npm publish --provenance --access public
+      # Staging never makes a version installable: a maintainer must approve it
+      # with 2FA on npmjs.com or with `npm stage approve` before it goes live.
+      # npm prefers trusted publishing (OIDC) when it is configured and only
+      # falls back to the stage-only token.
+      - name: Stage the package on npm
+        run: npm stage publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Ask for approval
+        run: |
+          name="$(node -p "require('./package.json').name")"
+          {
+            echo "### ${name}@${GITHUB_REF_NAME#v} is staged on npm"
+            echo
+            echo "It is **not public yet**. A maintainer must approve it with 2FA:"
+            echo "the Staged Packages tab on npmjs.com, or \`npm stage list\` then \`npm stage approve <stage-id>\`."
+          } >> "$GITHUB_STEP_SUMMARY"

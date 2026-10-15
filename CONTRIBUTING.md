@@ -176,7 +176,13 @@ Maintainers only.
 
 ### Publishing
 
-Pushing a `v<x.y.z>` tag runs the **Release** workflow. It checks that the tag matches `package.json` and is on `master`, runs `npm test`, and publishes the package to npm with provenance. Then create a GitHub Release from the tag, using that version's changelog section as the notes.
+Pushing a `v<x.y.z>` tag runs the **Release** workflow. It checks that the tag matches `package.json` and is on `master`, runs `npm test`, and **stages** the package on npm with provenance (`npm stage publish`). A staged version is not installable yet:
+
+1. A maintainer reviews the staged version in the package's **Staged Packages** tab on npmjs.com (or with `npm stage list`, `npm stage view <stage-id>` and `npm stage download <stage-id>`).
+2. The maintainer approves it with 2FA on npmjs.com or with `npm stage approve <stage-id>`. Only then does it go live. A bad build is discarded with `npm stage reject <stage-id>`.
+3. Create a GitHub Release from the tag, using that version's changelog section as the notes.
+
+The workflow authenticates with npm trusted publishing (OIDC) when it is configured for this repository, and otherwise with a stage-only token stored as the `NPM_TOKEN` secret of the `npm` environment. Both are limited to staging, so neither can make a version public without the approval step.
 
 ## License
 
